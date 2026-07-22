@@ -1,0 +1,16 @@
+{
+  "name": "qris-convert",
+  "version": "1.0.0",
+  "description": "Convert QRIS statis ke QRIS dinamis (nominal custom) dengan recalculation CRC16 — dependency-free, ESM.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "src"
+  ],
+  "keywords": ["qris", "qris-dinamis", "payment", "indonesia", "whatsapp-bot"],
+  "license": "MIT"
+}

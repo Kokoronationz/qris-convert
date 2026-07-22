@@ -8,7 +8,7 @@ Dependency-free, murni ESM — tinggal `import` langsung di bot.
 Taruh folder `qris-convert` ini di sebelah project bot kamu, misalnya:
 
 ```
-naffzx-bot/
+kokoronationz-bot/
 qris-convert/
 ```
 
@@ -72,4 +72,13 @@ npm publish --access public
 ```
 
 Cek dulu nama `qris-convert` belum dipakai orang lain (`npm view qris-convert`) — kalau sudah ada,
-ganti `name` di `package.json`, misalnya jadi scoped `@naffzx/qris-convert`.
+ganti `name` di `package.json`, misalnya jadi scoped `@kokoronationz/qris-convert`.
+
+# Credits
+
+Library ini dibuat dan dikembangkan oleh **Kokoronationz**.
+
+Implementasi konversi QRIS pada library ini **terinspirasi dari proyek qris-api** milik **idlanyor**. Terima kasih atas ide dan referensi implementasinya.
+
+- Inspirasi: https://github.com/idlanyor/qris-api
+- Pengembang library ini: Kokoronationz

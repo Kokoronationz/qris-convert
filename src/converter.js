@@ -12,7 +12,7 @@ function toTLV(tag, value) {
  * @param {object} [options]
  * @param {number} [options.feeFixed] - biaya tambahan nominal tetap (opsional)
  * @param {number} [options.feePercent] - biaya tambahan persen (opsional)
- * @returns {{ qris: string, nominal: string }}
+ * @returns {{ qris: string, nominal: string, fee: integer, total: integer }}
  */
 export function convertQris(qrisStatis, nominal, options = {}) {
   if (!qrisStatis || typeof qrisStatis !== 'string') {
@@ -23,6 +23,17 @@ export function convertQris(qrisStatis, nominal, options = {}) {
   if (!/^\d+$/.test(amount)) {
     throw new Error('Nominal harus berupa angka bulat');
   }
+
+  // Hitung fee
+  let fee = 0;
+
+  if (options.feeFixed) {
+    fee = Number(options.feeFixed);
+  } else if (options.feePercent) {
+    fee = Math.round(Number(amount) * Number(options.feePercent) / 100);
+  }
+
+  const total = Number(amount) + fee;
 
   let payload = qrisStatis.trim();
 
@@ -57,5 +68,7 @@ export function convertQris(qrisStatis, nominal, options = {}) {
   return {
     qris: withCrcTag + crc,
     nominal: amount,
+    fee,
+    total
   };
 }

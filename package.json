@@ -2,15 +2,37 @@
   "name": "qris-convert",
   "version": "1.0.0",
   "description": "Convert QRIS statis ke QRIS dinamis (nominal custom) dengan recalculation CRC16 — dependency-free, ESM.",
+  "keywords": [
+    "qris",
+    "qris-dinamis",
+    "payment",
+    "indonesia",
+    "whatsapp-bot"
+  ],
+  "homepage": "https://github.com/kokoronationz/qris-convert#readme",
+  "bugs": {
+    "url": "https://github.com/kokoronationz/qris-convert/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kokoronationz/qris-convert.git"
+  },
+  "license": "MIT",
+  "author": "kokoronationz",
   "type": "module",
-  "main": "index.js",
   "exports": {
     ".": "./index.js"
   },
+  "main": "index.js",
   "files": [
     "index.js",
     "src"
   ],
-  "keywords": ["qris", "qris-dinamis", "payment", "indonesia", "whatsapp-bot"],
-  "license": "MIT"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "jimp": "^1.6.1",
+    "jsqr": "^1.4.0"
+  }
 }

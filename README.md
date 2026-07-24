@@ -3,12 +3,12 @@
 Ubah QRIS statis jadi QRIS dinamis (nominal custom) tanpa perlu jalanin server API terpisah.
 Dependency-free, murni ESM — tinggal `import` langsung di bot.
 
-## Pasang di project bot (lokal, tanpa publish ke npm)
+## Pasang di project bot
 
 Taruh folder `qris-convert` ini di sebelah project bot kamu, misalnya:
 
 ```
-kokoronationz-bot/
+mirai-bot/
 qris-convert/
 ```
 

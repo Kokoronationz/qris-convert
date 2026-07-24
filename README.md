@@ -57,22 +57,11 @@ sama seperti string QRIS dinamis dari API biasa — bedanya nggak perlu network 
 | `getMerchantCity(qris)` | `string \| null` | tag 60 |
 | `getAmount(qris)` | `string \| null` | tag 54 (kalau QRIS-nya sudah dinamis) |
 | `crc16ccitt(str)` | `string` | hitung CRC16-CCITT manual kalau perlu |
+| `readQris(buffer)` | `string \| null` | decode QR |
 
 `options` pada `convertQris`:
 - `feeFixed` — nominal tambahan tetap (tag 55/56)
 - `feePercent` — tambahan dalam persen (tag 55/57)
-
-## Publish ke npm publik (opsional)
-
-Kalau suatu saat mau dipakai lintas project via registry publik:
-
-```bash
-npm login
-npm publish --access public
-```
-
-Cek dulu nama `qris-convert` belum dipakai orang lain (`npm view qris-convert`) — kalau sudah ada,
-ganti `name` di `package.json`, misalnya jadi scoped `@kokoronationz/qris-convert`.
 
 # Credits
 

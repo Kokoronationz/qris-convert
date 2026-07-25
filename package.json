@@ -1,6 +1,6 @@
 {
   "name": "qris-convert",
-  "version": "1.0.0",
+  "version": "1.0.8",
   "description": "Convert QRIS statis ke QRIS dinamis (nominal custom) dengan recalculation CRC16 — dependency-free, ESM.",
   "keywords": [
     "qris",

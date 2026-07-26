@@ -1,7 +1,7 @@
 import { Jimp } from 'jimp'
 import jsQR from 'jsqr'
 
-export async function readQris(input) {
+export async function readQR(input) {
   const image = Buffer.isBuffer(input)
     ? await Jimp.read(input)
     : await Jimp.read(input)

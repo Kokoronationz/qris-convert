@@ -1,6 +1,6 @@
 import QRCode from 'qrcode'
 
-export async function generateQRCode(text, options = {}) {
+export async function createQR(text, options = {}) {
   return QRCode.toBuffer(text, {
     errorCorrectionLevel: 'M',
     margin: 2,

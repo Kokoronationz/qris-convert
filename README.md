@@ -57,7 +57,8 @@ sama seperti string QRIS dinamis dari API biasa — bedanya nggak perlu network 
 | `getMerchantCity(qris)` | `string \| null` | tag 60 |
 | `getAmount(qris)` | `string \| null` | tag 54 (kalau QRIS-nya sudah dinamis) |
 | `crc16ccitt(str)` | `string` | hitung CRC16-CCITT manual kalau perlu |
-| `readQris(buffer)` | `string \| null` | decode QR |
+| `readQR(buffer)` | `string \| null` | decode QR |
+| `createQR(string)` | `buffer` | create QR Code|
 
 `options` pada `convertQris`:
 - `feeFixed` — nominal tambahan tetap (tag 55/56)
